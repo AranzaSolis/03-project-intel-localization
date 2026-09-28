@@ -23,7 +23,7 @@ html {
 body {
   margin: 0;
   font-family: "Intel Clear", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  background: #022342;
+  background: #ffffff;
   color: #0d1b2a;
   line-height: 1.6;
   font-weight: 400;
@@ -124,7 +124,7 @@ img {
 
 .sustainability-story {
   padding: 4rem 0 3.5rem;
-  background: #022342;
+  background: linear-gradient(135deg, #07375e 0%, #276eb4 38%, #242cba 100%);
 }
 
 .timeline-header {
@@ -498,6 +498,208 @@ img {
 .footer-links a:hover,
 .footer-links a:focus {
   color: #9adff9;
+}
+
+.sustainability-carousel {
+  padding: 3rem 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, #07375e 0%, #276eb4 38%, #242cba 100%);
+  color: #ffffff;
+}
+
+.sustainability-carousel h2 {
+  margin: 0 0 2rem;
+  text-align: center;
+}
+
+#sustainabilityCarousel {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 4.5rem;
+}
+
+.sustainability-carousel .carousel-inner {
+  position: relative;
+  height: 430px;
+  overflow: visible;
+  perspective: 1400px;
+  transform-style: preserve-3d;
+}
+
+.sustainability-carousel .carousel-item {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  display: block;
+  width: 70%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  border-top: 4px solid var(--intel-cyan);
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+  opacity: 0.35;
+  transform: translateX(0) translateZ(-240px) scale(0.68);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  filter: saturate(0.65) brightness(0.72);
+  pointer-events: none;
+  transition: transform 650ms cubic-bezier(0.2, 0.75, 0.25, 1), opacity 500ms ease, filter 500ms ease;
+}
+
+.sustainability-carousel .carousel-item[data-position="left"] {
+  z-index: 2;
+  opacity: 0.72;
+  transform: translateX(-76%) translateZ(-90px) rotateY(32deg) scale(0.82);
+  filter: saturate(0.8) brightness(0.82);
+}
+
+.sustainability-carousel .carousel-item[data-position="right"] {
+  z-index: 2;
+  opacity: 0.72;
+  transform: translateX(76%) translateZ(-90px) rotateY(-32deg) scale(0.82);
+  filter: saturate(0.8) brightness(0.82);
+}
+
+.sustainability-carousel .carousel-item[data-position="center"] {
+  z-index: 3;
+  opacity: 1;
+  transform: translateX(0) translateZ(80px) rotateY(0) scale(1);
+  filter: none;
+  pointer-events: auto;
+}
+
+.sustainability-carousel .carousel-image {
+  height: 290px;
+  padding: 1rem;
+  object-fit: contain;
+  background: #f3f7fb;
+}
+
+.sustainability-carousel .carousel-caption {
+  position: static;
+  min-height: 132px;
+  padding: 1rem 1.5rem;
+  background: #ffffff;
+  color: #0d1b2a;
+  text-align: center;
+}
+
+.sustainability-carousel .carousel-caption h3,
+.sustainability-carousel .carousel-caption p {
+  margin: 0 0 0.5rem;
+}
+
+.sustainability-carousel .carousel-control-prev,
+.sustainability-carousel .carousel-control-next {
+  top: 50%;
+  bottom: auto;
+  z-index: 5;
+  width: 3.4rem;
+  height: 3.4rem;
+  border: 1px solid rgba(0, 163, 255, 0.8);
+  border-radius: 50%;
+  background: rgba(2, 35, 66, 0.94);
+  color: #ffffff;
+  opacity: 1;
+  transform: translateY(-50%);
+  box-shadow: 0 0 0 4px rgba(0, 163, 255, 0.14), 0 8px 22px rgba(0, 0, 0, 0.3);
+  transition: background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.sustainability-carousel .carousel-control-prev {
+  inset-inline-start: 0;
+  inset-inline-end: auto;
+}
+
+.sustainability-carousel .carousel-control-next {
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+}
+
+.sustainability-carousel .carousel-control-prev i,
+.sustainability-carousel .carousel-control-next i {
+  font-size: 1.25rem;
+}
+
+.sustainability-carousel .carousel-control-prev:hover,
+.sustainability-carousel .carousel-control-next:hover {
+  background: var(--intel-blue);
+  box-shadow: 0 0 0 5px rgba(0, 163, 255, 0.26), 0 10px 26px rgba(0, 0, 0, 0.4);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.sustainability-carousel .carousel-indicators {
+  bottom: -2.1rem;
+  margin-bottom: 0;
+}
+
+.sustainability-carousel .carousel-indicators [data-bs-target] {
+  width: 0.65rem;
+  height: 0.65rem;
+  margin: 0 0.35rem;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  background: transparent;
+  opacity: 1;
+}
+
+.sustainability-carousel .carousel-indicators .active {
+  border-color: var(--intel-cyan);
+  background: var(--intel-cyan);
+  box-shadow: 0 0 10px rgba(0, 163, 255, 0.8);
+}
+
+html[dir="rtl"] .sustainability-carousel .carousel-control-prev i,
+html[dir="rtl"] .sustainability-carousel .carousel-control-next i {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 760px) {
+  #sustainabilityCarousel {
+    padding: 0 2.6rem;
+  }
+
+  .sustainability-carousel .carousel-inner {
+    height: 390px;
+  }
+
+  .sustainability-carousel .carousel-item {
+    left: 10%;
+    width: 80%;
+  }
+
+  .sustainability-carousel .carousel-item[data-position="left"] {
+    transform: translateX(-60%) translateZ(-110px) rotateY(25deg) scale(0.76);
+  }
+
+  .sustainability-carousel .carousel-item[data-position="right"] {
+    transform: translateX(60%) translateZ(-110px) rotateY(-25deg) scale(0.76);
+  }
+
+  .sustainability-carousel .carousel-image {
+    height: 250px;
+  }
+
+  .sustainability-carousel .carousel-caption {
+    min-height: 136px;
+    padding: 0.8rem;
+  }
+
+  .sustainability-carousel .carousel-control-prev,
+  .sustainability-carousel .carousel-control-next {
+    width: 2.7rem;
+    height: 2.7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sustainability-carousel .carousel-item,
+  .sustainability-carousel .carousel-control-prev,
+  .sustainability-carousel .carousel-control-next {
+    transition-duration: 0.01ms;
+  }
 }
 
 @media (max-width: 760px) {

@@ -81,3 +81,35 @@ now add a subscruption form: use bootstrap to build a simple form for subscribin
   Build a Footer with content such as copyright notice or placeholder navigation links (e.g., Privacy Policy, Terms of Use, Contact).
 
   Adapt for RTL and Localization: modify bootstrap grid so layout adapts correctlly in RTL mode. use the bootstrap link
+
+
+
+
+
+
+
+
+
+
+
+
+
+  The site achieves a score of 90 or more on Lighthouse accessibility tests, with proper color contrast, descriptive alt attributes, and an accessible subscription form
+
+ Auto-Detect Language & Adjust Layout
+Implemented JavaScript script to detect language changes and dynamically apply RTL mode.  to generate a script that detects when the page language changes (e.g., via Google Translate) and applies RTL as needed. Use the bootstrap link to java that I included at end of html.
+
+
+Also, add a bootstrap component carousel to enhance the functionallity of user experience and introduce interactive elements that improve user  experience.
+
+
+
+
+
+
+
+
+I want to make the background white but surround the timeline with the same gradient background as the header as well as the carousel. Important: the timeline section already works well using flexbox, so I do **not** want to modify or replace that section. Leave the existing timeline code as-is. also keep the carousel as is in terms of format.
+
+
+make the carousel look like a 3D carousel with some nice and asthetic arrows that fit the intel style. make it look visually pleasing
